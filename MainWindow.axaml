@@ -7,9 +7,9 @@
         Height="300"
         WindowStartupLocation="CenterScreen">
 
-  <StackPanel Background="DodgerBlue" Spacing="12" Margin="12">
+  <StackPanel Background="DodgerBlue" Spacing="12">
 
-    <StackPanel Orientation="Horizontal" Spacing="12">
+    <StackPanel Orientation="Horizontal" Spacing="12" Margin="12">
       <TextBlock x:Name="TextBlock"
                  FontFamily="/#Symbols"
                  FontSize="26"
@@ -23,7 +23,7 @@
                  VerticalAlignment="Center" />
     </StackPanel>
 
-    <StackPanel Orientation="Horizontal" Spacing="12">
+    <StackPanel Orientation="Horizontal" Spacing="12" Margin="12">
       <local:CustomControl x:Name="TextLayout"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Top" />
