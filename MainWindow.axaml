@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TextLayoutWidthRepro"
+        x:Class="TextLayoutWidthRepro.MainWindow"
+        Title="TextLayoutWidthRepro"
+        Width="400"
+        Height="300"
+        WindowStartupLocation="CenterScreen">
+
+  <StackPanel Background="DodgerBlue" Spacing="12" Margin="12">
+
+    <StackPanel Orientation="Horizontal" Spacing="12">
+      <TextBlock x:Name="TextBlock"
+                 FontFamily="/#Symbols"
+                 FontSize="26"
+                 Text="&#xe971;"
+                 Background="Black"
+                 Foreground="White"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top" />
+
+      <TextBlock Text="{Binding #TextBlock.Bounds.Width, StringFormat='TextBlock Width: {0}'}"
+                 VerticalAlignment="Center" />
+    </StackPanel>
+
+    <StackPanel Orientation="Horizontal" Spacing="12">
+      <local:CustomControl x:Name="TextLayout"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top" />
+
+      <TextBlock Text="{Binding #TextLayout.Bounds.Width, StringFormat='TextLayout Width: {0}'}"
+                 VerticalAlignment="Center" />
+    </StackPanel>
+
+  </StackPanel>
+
+</Window>
